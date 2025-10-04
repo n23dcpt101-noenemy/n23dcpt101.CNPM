@@ -1,6 +1,6 @@
 # Use Case Description
 
-# Use Case 1: Đặt hàng
+## Use Case 1: Đặt hàng
 Tên Use Case: Đặt hàng
 Tác nhân chính: Khách hàng
 Mô tả ngắn: Khách hàng chọn sản phẩm, thêm vào giỏ, nhập thông tin giao hàng và tạo đơn hàng.
@@ -15,7 +15,7 @@ Nếu giỏ hàng rỗng → hiển thị thông báo lỗi.
 Nếu thông tin giao hàng không hợp lệ → yêu cầu nhập lại.
 Kết quả: Đơn hàng mới được tạo trong hệ thống.
 
-# Use Case 2: Thanh toán online
+## Use Case 2: Thanh toán online
 Tên Use Case: Thanh toán online
 Tác nhân chính: Khách hàng
 Tác nhân phụ: Hệ thống thanh toán (Payment Gateway)
