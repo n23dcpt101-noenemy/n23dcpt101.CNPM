@@ -1,6 +1,0 @@
-# Mini Project: Hệ thống bán hàng online
-- Tác nhân (Actors):
-+ Khách hàng (Customer) – người mua hàng.
-+ Quản trị viên (Admin) – quản lý hệ thống, sản phẩm, đơn hàng.
-+ Nhân viên giao hàng (Shipper) – thực hiện giao hàng.
-+ (Tùy chọn) Hệ thống thanh toán (Payment Gateway) – cổng thanh toán online.
