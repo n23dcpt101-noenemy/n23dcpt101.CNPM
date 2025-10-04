@@ -1,35 +1,20 @@
-# Project Report – Hệ thống bán hàng online
+# Project Report – Hệ thống bán hàng online (Mini Project)
 
 ## 1. Giới thiệu
-Mini Project: Xây dựng hệ thống bán hàng online.
-Bao gồm các bước từ phân tích yêu cầu, thiết kế UML, coding giao diện, đến quản lý source code trên GitHub.
-
----
-
+**Mục tiêu dự án:** Xây dựng một mô-đun cơ bản của hệ thống bán hàng online (mini) tập trung vào quy trình **Đặt hàng & Thanh toán** và **Giao diện đăng nhập**.  
+Báo cáo này gom tất cả artifacts: Use Case, Sequence Diagram, mã nguồn giao diện (login), hướng dẫn quản lý source trên GitHub và quy trình phát triển chi tiết.
 ## 2. Artifacts đã hoàn thành
-### 2.1 Use Case Diagram
-- File: use case diagram lab2.png | UCase Lab 03.png
-- Mô tả: Chức năng chính gồm Xem sản phẩm, Đặt hàng, Thanh toán online, Quản lý đơn hàng.
-
-### 2.2 Sequence Diagram
-- File: SQ diagram Lab03.png
-- Mô tả: Luồng tương tác chi tiết trong quy trình đặt hàng và thanh toán online.
-
-### 2.3 Form Login (HTML/CSS/JS)
-- File: Coding form login.html
-- Chức năng: Nhập Username/Password, Remember me, nút Login/Cancel, kiểm tra dữ liệu bằng JavaScript.
-
----
-
+- UCase Lab 03.png — Use Case Diagram (PlantUML)
+- SQ diagram Lab 03.png — Sequence Diagram (PlantUML)
+- Coding form login.html — Form Login (HTML + CSS + JavaScript)
+- `Project_Report.md` — (this file)
 ## 3. Quy trình phát triển
 1. **Phân tích yêu cầu:** xác định actor, chức năng chính.  
 2. **Thiết kế UML:** Use Case + Sequence Diagram.  
 3. **Coding:** form login bằng HTML/CSS/JS.  
 4. **Tích hợp:** gom UML + code + báo cáo.  
 5. **Triển khai:** quản lý trên GitHub.
-
----
-
+4. Lập trình (Implementation) — viết `login.html` và tổ chức file  
 ## 4. Quản lý Source Code trên GitHub
 ### 4.1 Push code lên GitHub
 ```bash
@@ -48,4 +33,3 @@ git push -u origin main
 Open `login.html` in browser.
 git tag v1.0
 git push origin v1.0
-
