@@ -1,1 +1,32 @@
+# Use Case Description
 
+# Use Case 1: Đặt hàng
+Tên Use Case: Đặt hàng
+Tác nhân chính: Khách hàng
+Mô tả ngắn: Khách hàng chọn sản phẩm, thêm vào giỏ, nhập thông tin giao hàng và tạo đơn hàng.
+Điều kiện tiên quyết: Khách hàng đã đăng nhập.
+Luồng sự kiện chính:
+Khách hàng chọn sản phẩm và thêm vào giỏ.
+Khách hàng nhấn “Đặt hàng”.
+Hệ thống yêu cầu nhập thông tin giao hàng (địa chỉ, số điện thoại).
+Hệ thống tạo đơn hàng và thông báo thành công.
+Luồng thay thế:
+Nếu giỏ hàng rỗng → hiển thị thông báo lỗi.
+Nếu thông tin giao hàng không hợp lệ → yêu cầu nhập lại.
+Kết quả: Đơn hàng mới được tạo trong hệ thống.
+
+# Use Case 2: Thanh toán online
+Tên Use Case: Thanh toán online
+Tác nhân chính: Khách hàng
+Tác nhân phụ: Hệ thống thanh toán (Payment Gateway)
+Mô tả ngắn: Khách hàng thực hiện thanh toán trực tuyến cho đơn hàng.
+Điều kiện tiên quyết: Khách hàng đã tạo đơn hàng.
+Luồng sự kiện chính:
+Khách hàng chọn “Thanh toán online”.
+Hệ thống chuyển hướng đến cổng thanh toán.
+Khách hàng nhập thông tin thẻ/ ví điện tử.
+Cổng thanh toán xác thực giao dịch.
+Nếu thành công, hệ thống cập nhật trạng thái đơn hàng là “Đã thanh toán”.
+Luồng thay thế:
+Nếu giao dịch thất bại → hiển thị thông báo lỗi và cho phép thử lại.
+Kết quả: Thanh toán thành công, đơn hàng sẵn sàng xử lý giao hàng.
