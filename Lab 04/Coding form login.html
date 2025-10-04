@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-login {
+      background-color: #e60000;
+      color: #fff;
+    }
+
+    .btn-cancel {
+      background-color: #888;
+      color: #fff;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Form</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter Username">
+        <p id="errorUser" class="error"></p>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
+        <p id="errorPass" class="error"></p>
+      </div>
+      <div class="options">
+        <label>
+          <input type="checkbox" id="remember"> Remember me
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <div class="btn-group">
+        <button type="submit" class="btn btn-login">Login</button>
+        <button type="button" class="btn btn-cancel" onclick="resetForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const userField = document.getElementById('username');
+    const passField = document.getElementById('password');
+    const errorUser = document.getElementById('errorUser');
+    const errorPass = document.getElementById('errorPass');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // ngăn reload trang
+      let isValid = true;
+
+      // Reset lỗi cũ
+      errorUser.textContent = '';
+      errorPass.textContent = '';
+
+      // Kiểm tra username
+      if (userField.value.trim() === '') {
+        errorUser.textContent = '⚠ Vui lòng nhập Username!';
+        isValid = false;
+      }
+
+      // Kiểm tra password
+      if (passField.value.trim() === '') {
+        errorPass.textContent = '⚠ Vui lòng nhập Password!';
+        isValid = false;
+      } else if (passField.value.length < 6) {
+        errorPass.textContent = '⚠ Mật khẩu ít nhất 6 ký tự!';
+        isValid = false;
+      }
+
+      // Nếu hợp lệ
+      if (isValid) {
+        alert("✅ Login thành công!");
+      }
+    });
+
+    function resetForm() {
+      userField.value = '';
+      passField.value = '';
+      errorUser.textContent = '';
+      errorPass.textContent = '';
+    }
+  </script>
+</body>
+</html>
